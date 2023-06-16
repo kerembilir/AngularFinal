@@ -1,0 +1,18 @@
+<div class="container" style="display: flex; justify-content: center;">
+  <mat-card class="mat-elevation-z8">
+   <mat-card-title>Oturum Aç</mat-card-title>
+     <mat-card-content>
+       <mat-form-field appearance="outline" >
+         <mat-label>Kullanıcı Adı</mat-label> 
+           <input matInput placeholder="Kullanıcı Adı" type="text" #kadi>   
+       </mat-form-field>
+       <mat-form-field appearance="outline" >
+         <mat-label>Parola</mat-label> 
+           <input matInput placeholder="Parola" type="password" #parola>   
+       </mat-form-field>
+
+       <p [routerLink]="['/kayitol']"><i>Üye değilseniz kaydolun.</i></p>
+       <button mat-raised-button color="primary" (click)="OturumAc(kadi.value, parola.value)">Oturum Aç</button>
+     </mat-card-content>
+   </mat-card>
+ </div>

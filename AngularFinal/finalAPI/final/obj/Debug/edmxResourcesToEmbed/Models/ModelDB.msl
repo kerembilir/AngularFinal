@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FinalModelStoreContainer" CdmEntityContainer="FinalEntities">
+    <EntitySetMapping Name="Cevap">
+      <EntityTypeMapping TypeName="FinalModel.Cevap">
+        <MappingFragment StoreEntitySet="Cevap">
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="CevapSoruId" ColumnName="CevapSoruId" />
+          <ScalarProperty Name="CevapUyeId" ColumnName="CevapUyeId" />
+          <ScalarProperty Name="CevapIcerik" ColumnName="CevapIcerik" />
+          <ScalarProperty Name="CevapId" ColumnName="CevapId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Etiket">
+      <EntityTypeMapping TypeName="FinalModel.Etiket">
+        <MappingFragment StoreEntitySet="Etiket">
+          <ScalarProperty Name="EtiketAdi" ColumnName="EtiketAdi" />
+          <ScalarProperty Name="EtiketId" ColumnName="EtiketId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kategori">
+      <EntityTypeMapping TypeName="FinalModel.Kategori">
+        <MappingFragment StoreEntitySet="Kategori">
+          <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+          <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Soru">
+      <EntityTypeMapping TypeName="FinalModel.Soru">
+        <MappingFragment StoreEntitySet="Soru">
+          <ScalarProperty Name="SoruEtiketId" ColumnName="SoruEtiketId" />
+          <ScalarProperty Name="SoruUyeId" ColumnName="SoruUyeId" />
+          <ScalarProperty Name="SoruKategoriId" ColumnName="SoruKategoriId" />
+          <ScalarProperty Name="Goruntulenme" ColumnName="Goruntulenme" />
+          <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+          <ScalarProperty Name="Icerik" ColumnName="Icerik" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="SoruId" ColumnName="SoruId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uye">
+      <EntityTypeMapping TypeName="FinalModel.Uye">
+        <MappingFragment StoreEntitySet="Uye">
+          <ScalarProperty Name="UyeFoto" ColumnName="UyeFoto" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="UyeAdmin" ColumnName="UyeAdmin" />
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="UyeId" ColumnName="UyeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,38 @@
+<button mat-button color="primary" (click)="goBack()"><mat-icon aria-label="label">arrow_back</mat-icon></button>
+<div class="container">
+  <h2>Etiketler</h2>
+  <mat-form-field appearance="outline">
+    <input matInput placeholder="Aranacak bir değer giriniz." (keyup)="Filtrele($event)">
+  </mat-form-field>
+  <button mat-fab matTooltip="Etiket Ekle" color="primary" (click)="Ekle()">
+    <mat-icon aria-label="label">add</mat-icon>
+  </button>
+<p>&nbsp;</p>
+
+<mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <ng-container matColumnDef="EtiketAdi">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Etiket Adı</mat-header-cell>
+    <mat-cell *matCellDef="let kayit">{{kayit.EtiketAdi}}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="detay">
+    <mat-header-cell *matHeaderCellDef>İşlemler</mat-header-cell>
+    <mat-cell *matCellDef="let kayit">
+      <button mat-icon-button color="primary" matTooltip="Soru Listele" [routerLink]="['/admin/soru',kayit.SoruEtiketId]">
+        <mat-icon aria-label="label">list_alt</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" matTooltip="Etiket Düzenle" (click)="Duzenle(kayit)">
+        <mat-icon aria-label="label">edit_note</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" matTooltip="Etiket Sil" (click)="Sil(kayit)">
+        <mat-icon aria-label="label">delete</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButton>
+</mat-paginator>
+
+</div>

@@ -1,0 +1,38 @@
+<div style="display: flex; justify-content: center;">
+  <mat-card class="mat-elevation-z8" style="width: 50%">
+   <mat-card-title>Üyelik Oluştur</mat-card-title>
+   <mat-card-content >
+     <form [formGroup]="kayitForm">
+     <div class="container">
+       <mat-form-field appearance="outline">
+         <mat-label>Kullanıcı Adı</mat-label>
+         <input matInput placeholder="Kullanıcı Adı" formControlName="KullaniciAdi" #kadi required>
+       </mat-form-field>
+       <mat-form-field appearance="outline">
+         <mat-label>Ad Soyad</mat-label>
+         <input matInput placeholder="Ad Soyad" formControlName="AdSoyad" #adsoyad required>
+       </mat-form-field>
+       <mat-form-field appearance="outline">
+         <mat-label>E-Posta</mat-label>
+         <input matInput placeholder="E-Posta" formControlName="Email" #email required>
+       </mat-form-field>
+       <mat-form-field appearance="outline">
+         <mat-label>Parola</mat-label>
+         <input matInput placeholder="Parola" formControlName="Sifre" type="password" required>
+       </mat-form-field>
+       
+       <mat-form-field appearance="outline">
+         <mat-label>Parola Tekrar</mat-label>
+         <input matInput placeholder="Parola Tekrar" type="password" [formControl]="parolaTekrar" required>
+         <mat-error *ngIf="parolaTekrar.hasError('required')">Parola tekrarını girin.</mat-error>
+         <mat-error *ngIf="parolaTekrar.hasError('mismatch')">Parolalar eşleşmiyor.</mat-error>
+       </mat-form-field>
+        
+     </div>
+     </form>
+     <p [routerLink]="['/login']"><i>Üyeseniz oturum açınız...</i></p>
+   </mat-card-content>
+   <button mat-raised-button color="primary"  (click)="KayitOl()" >Kaydol</button>&nbsp;
+ </mat-card>
+ </div>
+ 

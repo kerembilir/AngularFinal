@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cevap">
+    <Key>
+      <PropertyRef Name="CevapId" />
+    </Key>
+    <Property Name="CevapId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CevapIcerik" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CevapUyeId" Type="int" Nullable="false" />
+    <Property Name="CevapSoruId" Type="int" Nullable="false" />
+    <Property Name="Tarih" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Etiket">
+    <Key>
+      <PropertyRef Name="EtiketId" />
+    </Key>
+    <Property Name="EtiketId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EtiketAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kategori">
+    <Key>
+      <PropertyRef Name="KategoriId" />
+    </Key>
+    <Property Name="KategoriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Soru">
+    <Key>
+      <PropertyRef Name="SoruId" />
+    </Key>
+    <Property Name="SoruId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Icerik" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Tarih" Type="datetime" Nullable="false" />
+    <Property Name="Goruntulenme" Type="int" Nullable="false" />
+    <Property Name="SoruKategoriId" Type="int" Nullable="false" />
+    <Property Name="SoruUyeId" Type="int" Nullable="false" />
+    <Property Name="SoruEtiketId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Uye">
+    <Key>
+      <PropertyRef Name="UyeId" />
+    </Key>
+    <Property Name="UyeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UyeAdmin" Type="int" Nullable="false" />
+    <Property Name="UyeFoto" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK_Cevap_ToSoru">
+    <End Role="Soru" Type="Self.Soru" Multiplicity="1" />
+    <End Role="Cevap" Type="Self.Cevap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Soru">
+        <PropertyRef Name="SoruId" />
+      </Principal>
+      <Dependent Role="Cevap">
+        <PropertyRef Name="CevapSoruId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cevap_ToUye">
+    <End Role="Uye" Type="Self.Uye" Multiplicity="1" />
+    <End Role="Cevap" Type="Self.Cevap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uye">
+        <PropertyRef Name="UyeId" />
+      </Principal>
+      <Dependent Role="Cevap">
+        <PropertyRef Name="CevapUyeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Soru_ToEtiket">
+    <End Role="Etiket" Type="Self.Etiket" Multiplicity="1" />
+    <End Role="Soru" Type="Self.Soru" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Etiket">
+        <PropertyRef Name="EtiketId" />
+      </Principal>
+      <Dependent Role="Soru">
+        <PropertyRef Name="SoruEtiketId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Soru_ToKategori">
+    <End Role="Kategori" Type="Self.Kategori" Multiplicity="1" />
+    <End Role="Soru" Type="Self.Soru" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategori">
+        <PropertyRef Name="KategoriId" />
+      </Principal>
+      <Dependent Role="Soru">
+        <PropertyRef Name="SoruKategoriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Soru_ToUye">
+    <End Role="Uye" Type="Self.Uye" Multiplicity="1" />
+    <End Role="Soru" Type="Self.Soru" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uye">
+        <PropertyRef Name="UyeId" />
+      </Principal>
+      <Dependent Role="Soru">
+        <PropertyRef Name="SoruUyeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FinalModelStoreContainer">
+    <EntitySet Name="Cevap" EntityType="Self.Cevap" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Etiket" EntityType="Self.Etiket" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kategori" EntityType="Self.Kategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Soru" EntityType="Self.Soru" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Uye" EntityType="Self.Uye" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Cevap_ToSoru" Association="Self.FK_Cevap_ToSoru">
+      <End Role="Soru" EntitySet="Soru" />
+      <End Role="Cevap" EntitySet="Cevap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cevap_ToUye" Association="Self.FK_Cevap_ToUye">
+      <End Role="Uye" EntitySet="Uye" />
+      <End Role="Cevap" EntitySet="Cevap" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Soru_ToEtiket" Association="Self.FK_Soru_ToEtiket">
+      <End Role="Etiket" EntitySet="Etiket" />
+      <End Role="Soru" EntitySet="Soru" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Soru_ToKategori" Association="Self.FK_Soru_ToKategori">
+      <End Role="Kategori" EntitySet="Kategori" />
+      <End Role="Soru" EntitySet="Soru" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Soru_ToUye" Association="Self.FK_Soru_ToUye">
+      <End Role="Uye" EntitySet="Uye" />
+      <End Role="Soru" EntitySet="Soru" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

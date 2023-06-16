@@ -1,0 +1,21 @@
+<mat-card class="mat-elevation-z4">
+  <div class="container">
+    <h1>{{kat?.KategoriAdi}} ile ilgili tüm sorulanlar</h1>
+    <p></p>
+    <h3 *ngIf="sorular?.length==0">Henüz bu kategoriye soru eklenmedi.</h3>
+    <div *ngFor="let soru of sorular" class="liste-item">
+      <h2>{{soru.Baslik}}</h2>
+      <p>
+        <b>Kategori:</b> {{soru.KategoriAdi}} &nbsp;&nbsp;
+        <b>Tarih:</b> {{soru.Tarih | date:'dd.MM.yyyy HH:mm'}} &nbsp;&nbsp;
+        <b>Yazan:</b> <a href="#" [routerLink]="['/uyesoru', soru.SoruUyeId]">{{soru.UyeKadi}}</a> &nbsp;&nbsp;
+      </p>
+      <div class="liste-actions">
+        <a href="#" [routerLink]="['/soru', soru.SoruId]">
+          <mat-icon aria-label="label" matTooltip="Detay">question_mark</mat-icon>
+        </a>
+      </div>
+      <hr>
+    </div>
+  </div>
+</mat-card>

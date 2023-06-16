@@ -1,0 +1,40 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <span>{{dialogBaslik}} </span>
+</mat-toolbar>
+<div class="container" *ngIf="islem!='detay'">
+  <form [formGroup]="frm">
+    <mat-form-field appearance="outline">
+      <mat-label>Kategori Adı</mat-label>
+        <mat-select placeholder="Kategori Seçiniz" formControlName="SoruKategoriId" required>
+          <mat-option [value]="kat.KategoriId" *ngFor="let kat of kategoriler">{{kat.KategoriAdi}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Başlık</mat-label>
+      <input matInput placeholder="Soru Başlığını yazınız" formControlName="Baslik" required>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Soru İçerik</mat-label>
+      <input matInput placeholder="Soru içeriğinizi yazınız" formControlName="Icerik" required>
+    </mat-form-field>
+    
+    <mat-form-field appearance="outline">
+      <mat-label>Etiket</mat-label>
+        <mat-select placeholder="Etiket Seçiniz" formControlName="SoruEtiketId" required>
+          <mat-option [value]="etiket.EtiketId" *ngFor="let etiket of etiketler">{{etiket.EtiketAdi}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="dialogRef.close(frm.value)" [disabled]="frm.invalid">Kaydet</button>&nbsp;
+    <button mat-raised-button color="warn" (click)="dialogRef.close()">İptal</button>
+  </form>
+</div>
+
+
+
+<div class="container" *ngIf="islem=='detay'">
+  <h2>{{yeniKayit.Baslik}}</h2>
+  <div [innerHtml]="yeniKayit.Icerik"></div>
+  <p>Bu soru {{yeniKayit.Goruntulenme}} kez görüntülendi.</p>
+  <button mat-raised-button color="warn" (click)="dialogRef.close()">Kapat</button>
+</div>

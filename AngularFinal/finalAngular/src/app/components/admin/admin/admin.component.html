@@ -1,0 +1,93 @@
+<h1><b>SON EKLENENLER</b></h1>
+
+<mat-tab-group class="mat-elevation-z6">
+  <mat-tab label="Kategoriler">
+    <mat-card class="mat-elevation-z4">
+      <div class="container">         
+        <div *ngFor="let kat of kategoriler" class="kategori-item">
+          <div class="kategori-info">
+            <h3>{{kat.KategoriAdi}}</h3>
+            <p>
+              <b>Soru Sayısı:</b> {{kat.KatSoruSay}}
+            </p>
+          </div>
+          <div class="kategori-actions">
+            <a href="#" [routerLink]="['/kategori', kat.KategoriId]"><mat-icon aria-label="label">settings_suggest</mat-icon></a>
+          </div>
+          <div class="clear"></div>
+          <hr>
+        </div>
+        
+      </div>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="Etiketler">
+    <mat-card class="mat-elevation-z4">
+      <div class="container">              
+        <mat-chip-list>
+          <mat-chip *ngFor="let etiket of etiketler" color="#22A699">{{etiket.EtiketAdi}}</mat-chip>
+        </mat-chip-list>      
+      </div>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="Sorular">
+    <mat-card class="mat-elevation-z4">
+      <div class="container">
+          <div *ngFor="let soru of sorular" class="liste-item">
+  <div class="liste-info">
+    <h3>{{soru.Baslik}}</h3>
+    <p>
+      <b>Kategori:</b> <a href="#" [routerLink]="['/kategori', soru.SoruKategoriId]">{{soru.KategoriAdi}}</a>&nbsp;&nbsp;
+      <b>Tarih:</b> {{soru.Tarih |date:'dd.MM.yyyy HH:mm'}}&nbsp;&nbsp;
+      <b>Yazan:</b> <a href="#" [routerLink]="['/uyesoru', soru.SoruUyeId]">{{soru.UyeKadi}}</a>
+    </p>
+  </div>
+  <div class="liste-actions">
+    <a href="#" [routerLink]="['/soru', soru.SoruId]"><mat-icon aria-label="label" matTooltip="Detay">question_mark</mat-icon></a>
+  </div>
+  <div class="clear"></div>
+  <hr>
+</div>
+
+      </div>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="Cevaplar">
+    <mat-card class="mat-elevation-z4">
+      <div class="container">
+          <div *ngFor="let cevap of cevaplar">
+            <h3>{{cevap.CevapIcerik}}</h3>
+            <p>
+              <b> Soru :</b> <a href="#" [routerLink]="['/soru', cevap.CevapSoruId]">{{cevap.SoruBaslik}}</a> &nbsp;&nbsp;
+              <b> Tarih :</b> {{cevap.Tarih |date:'dd.MM.yyyy HH:mm'}} &nbsp;&nbsp;
+              <b> Yazan :</b><a href="#" [routerLink]="['/uyesoru', cevap.CevapUyeId]">{{cevap.KullaniciAdi}}</a> &nbsp;&nbsp;
+            </p>
+            <hr>
+          </div>
+      </div>
+    </mat-card>
+  </mat-tab>
+  <mat-tab label="Üyeler">
+    <mat-card class="mat-elevation-z4">
+      <div class="container">
+        <div *ngFor="let uye of uyeler" class="uye-item">
+          <div class="uye-info">
+            <h3>{{uye.KullaniciAdi}}</h3>
+            <p>
+              <b>Ad-Soyad :</b> <a href="#" [routerLink]="['/admin-uye', uye.AdSoyad]">{{uye.AdSoyad}}</a>
+            </p>
+          </div>
+          <div class="uye-actions">
+            <a href="#" [routerLink]="['/admin-uye', uye.UyeId]"><mat-icon aria-label="label">manage_accounts</mat-icon></a>
+          </div>
+          <div class="clear"></div>
+          <hr>
+        </div>
+        
+      </div>
+    </mat-card>
+  </mat-tab>
+</mat-tab-group>
+
+
+

@@ -1,0 +1,32 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <span>{{dialogBaslik}} </span>
+</mat-toolbar>
+<div class="container">
+  <form [formGroup]="frm">
+    <mat-form-field appearance="outline">
+      <mat-label>Kategori Adı</mat-label>
+        <mat-select placeholder="Kategori Seçiniz" formControlName="KategoriId" required>
+          <mat-option [value]="kat.KategoriId" *ngFor="let kat of kategoriler">{{kat.KategoriAdi}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Soru Başlığı</mat-label>
+        <mat-select placeholder="Soru Seçiniz" formControlName="CevapSoruId" required>
+          <mat-option [value]="CevapSoruId" *ngFor="let soru of sorular">{{soru.Baslik}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Soru İçeriği</mat-label>
+      <input matInput placeholder="Ayrıntılı şekilde sorunuzu yazınız." formControlName="CevapIcerik" required>
+    </mat-form-field>
+
+    <p></p>
+
+    <button mat-raised-button color="primary" (click)="dialogRef.close(frm.value)" [disabled]="frm.invalid">Kaydet</button>&nbsp;
+    <button mat-raised-button color="warn" (click)="dialogRef.close()">İptal</button>
+  </form>
+</div>
+
+
+
+

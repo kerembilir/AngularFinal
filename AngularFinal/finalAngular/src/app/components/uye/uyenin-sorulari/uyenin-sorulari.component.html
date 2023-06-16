@@ -1,0 +1,39 @@
+<button mat-button color="primary" (click)="goBack()"><mat-icon aria-label="label">arrow_back</mat-icon></button>
+<div class="container">
+  <mat-card class="mat-elevation-z4">
+  <h1> Sorularım</h1>
+    <mat-form-field appearance="outline" >
+      <input matInput placeholder="Aranacak bir değer giriniz." (keyup)="Filtrele($event)">
+    </mat-form-field>
+    <button mat-fab matTooltip="Soru Ekle" color="primary" (click)="Ekle()">
+      <mat-icon aria-label="label">loupe</mat-icon>
+    </button>
+  </mat-card>
+    <p></p>
+  <mat-card class="mat-elevation-z4">
+    
+    <h3 style="color:brown" *ngIf="sorular?.length==0">Henüz hiç soru eklenmediniz.</h3>
+    <div *ngFor="let soru of sorular">
+        <h2>{{soru.Baslik}}</h2>
+        <p> {{soru.Icerik}} </p>
+        <p>
+            <b> Kategori :</b> {{soru.KategoriAdi}} &nbsp;&nbsp;
+            <b> Etiket :</b> {{soru.EtiketAdi}} &nbsp;&nbsp;
+            <b> Tarih :</b> {{soru.Tarih |date:'dd.MM.yyyy HH:mm'}} &nbsp;&nbsp;
+        
+        </p>
+        <p>Sorunuz {{soru.Goruntulenme}} kez görüntülendi.</p>
+        <div>
+          <button mat-icon-button matTooltip="Detay" color="primary"><a href="#" [routerLink]="['/soru', soru.SoruId]">
+            <mat-icon aria-label="label">search</mat-icon></a></button>&nbsp;&nbsp;&nbsp;
+          <button mat-icon-button matTooltip="Düzenle" color="primary" (click)="Duzenle(kayit)" >
+            <mat-icon aria-label="label">edit</mat-icon>
+          </button>&nbsp;&nbsp;&nbsp;
+        </div>
+        <hr>
+
+    </div>
+    
+  </mat-card>
+  
+<p>&nbsp;</p>

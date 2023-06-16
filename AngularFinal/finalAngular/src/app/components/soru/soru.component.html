@@ -1,0 +1,35 @@
+<mat-card class="mat-elevation-z4">
+  <div class="container" *ngIf="soru">
+    <h1>{{soru.Baslik}}</h1>
+    <p></p>
+    <div [innerHtml]="soru.Icerik"></div>
+    <b>Kategori:</b> <i>{{soru.KategoriAdi}} </i>&nbsp;&nbsp;
+      <b>Tarih:</b> <i>{{soru.Tarih | date:'dd.MM.yyyy HH:mm'}}</i> &nbsp;&nbsp;
+      <b>Yazan:</b> <i>{{soru.UyeKadi}} </i>&nbsp;&nbsp;
+      <b>Etiket:</b> <i> {{soru.EtiketAdi}} </i>
+    <p></p>
+    <p></p>
+    <span matBadge="{{soru.Goruntulenme}}" matBadgeOverlap="false"><mat-icon aria-label="label" matTooltip="Görüntülenme Sayısı">import_contacts</mat-icon></span>
+    <hr>
+    <hr>
+    <h1>Cevaplar</h1>
+    <div *ngFor="let cevap of cevaplar">
+      <p>{{cevap.CevapIcerik}}</p>
+      <b><i>{{cevap.KullaniciAdi}}</i></b> &nbsp;&nbsp;
+      <b><i>{{cevap.Tarih | date:'dd.MM.yyyy HH:mm'}}</i></b> &nbsp;&nbsp;
+       
+      <hr>
+    </div>
+    <h3 *ngIf="!apiServis.oturumKontrol()" style="color: brown;">
+      Cevap yazabilmek için <a href="#" [routerLink]="['/login']">Oturum Açınız.</a>
+    </h3>
+    <div *ngIf="apiServis.oturumKontrol()">
+      <mat-form-field appearance="outline">
+        <mat-label>Cevabınız</mat-label>
+        <textarea matInput placeholder="Cevabınız" #cevapMetni></textarea>
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="CevapEkle(cevapMetni.value)">Cevap Ekle</button>
+    </div>
+  </div>
+</mat-card>
+

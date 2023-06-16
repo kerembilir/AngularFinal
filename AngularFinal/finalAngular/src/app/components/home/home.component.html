@@ -1,0 +1,23 @@
+<mat-card class="mat-elevation-z4">
+  <div class="container">
+    <div *ngFor="let soru of sorular" class="card-container">
+      <h1 class="card-title">{{soru.Baslik}}</h1>
+      <p class="card-info">
+        <span><b>Kategori:</b></span>
+        <a href="#" [routerLink]="['/kategori', soru.SoruKategoriId]">{{soru.KategoriAdi}}</a>&nbsp;&nbsp;&nbsp;
+        <span><b>Tarih:</b></span> {{soru.Tarih}} &nbsp;&nbsp;&nbsp;
+        <span><b>Yazan:</b></span>
+        <a href="#" [routerLink]="['/uyesoru', soru.SoruUyeId]">{{soru.UyeKadi}}</a>&nbsp;&nbsp;&nbsp;
+        <span><b>Etiket:</b></span>
+        <mat-chip color="primary">{{soru.EtiketAdi}}</mat-chip>
+      </p>
+      
+      <p class="card-actions">
+        <a href="#" [routerLink]="['/soru', soru.SoruId]"><mat-icon matTooltip="Soru Detay" aria-label="label">question_mark</mat-icon></a>
+      </p>
+      <hr class="hr-divider">
+    </div>
+  </div>
+</mat-card>
+
+  

@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="FinalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cevap">
+          <Key>
+            <PropertyRef Name="CevapId" />
+          </Key>
+          <Property Name="CevapId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CevapIcerik" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CevapUyeId" Type="int" Nullable="false" />
+          <Property Name="CevapSoruId" Type="int" Nullable="false" />
+          <Property Name="Tarih" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Etiket">
+          <Key>
+            <PropertyRef Name="EtiketId" />
+          </Key>
+          <Property Name="EtiketId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EtiketAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kategori">
+          <Key>
+            <PropertyRef Name="KategoriId" />
+          </Key>
+          <Property Name="KategoriId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KategoriAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Soru">
+          <Key>
+            <PropertyRef Name="SoruId" />
+          </Key>
+          <Property Name="SoruId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Baslik" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Icerik" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Tarih" Type="datetime" Nullable="false" />
+          <Property Name="Goruntulenme" Type="int" Nullable="false" />
+          <Property Name="SoruKategoriId" Type="int" Nullable="false" />
+          <Property Name="SoruUyeId" Type="int" Nullable="false" />
+          <Property Name="SoruEtiketId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Uye">
+          <Key>
+            <PropertyRef Name="UyeId" />
+          </Key>
+          <Property Name="UyeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullaniciAdi" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Sifre" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AdSoyad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UyeAdmin" Type="int" Nullable="false" />
+          <Property Name="UyeFoto" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_Cevap_ToSoru">
+          <End Role="Soru" Type="Self.Soru" Multiplicity="1" />
+          <End Role="Cevap" Type="Self.Cevap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Soru">
+              <PropertyRef Name="SoruId" />
+            </Principal>
+            <Dependent Role="Cevap">
+              <PropertyRef Name="CevapSoruId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cevap_ToUye">
+          <End Role="Uye" Type="Self.Uye" Multiplicity="1" />
+          <End Role="Cevap" Type="Self.Cevap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Uye">
+              <PropertyRef Name="UyeId" />
+            </Principal>
+            <Dependent Role="Cevap">
+              <PropertyRef Name="CevapUyeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Soru_ToEtiket">
+          <End Role="Etiket" Type="Self.Etiket" Multiplicity="1" />
+          <End Role="Soru" Type="Self.Soru" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Etiket">
+              <PropertyRef Name="EtiketId" />
+            </Principal>
+            <Dependent Role="Soru">
+              <PropertyRef Name="SoruEtiketId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Soru_ToKategori">
+          <End Role="Kategori" Type="Self.Kategori" Multiplicity="1" />
+          <End Role="Soru" Type="Self.Soru" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kategori">
+              <PropertyRef Name="KategoriId" />
+            </Principal>
+            <Dependent Role="Soru">
+              <PropertyRef Name="SoruKategoriId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Soru_ToUye">
+          <End Role="Uye" Type="Self.Uye" Multiplicity="1" />
+          <End Role="Soru" Type="Self.Soru" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Uye">
+              <PropertyRef Name="UyeId" />
+            </Principal>
+            <Dependent Role="Soru">
+              <PropertyRef Name="SoruUyeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FinalModelStoreContainer">
+          <EntitySet Name="Cevap" EntityType="Self.Cevap" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Etiket" EntityType="Self.Etiket" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kategori" EntityType="Self.Kategori" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Soru" EntityType="Self.Soru" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Uye" EntityType="Self.Uye" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Cevap_ToSoru" Association="Self.FK_Cevap_ToSoru">
+            <End Role="Soru" EntitySet="Soru" />
+            <End Role="Cevap" EntitySet="Cevap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cevap_ToUye" Association="Self.FK_Cevap_ToUye">
+            <End Role="Uye" EntitySet="Uye" />
+            <End Role="Cevap" EntitySet="Cevap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Soru_ToEtiket" Association="Self.FK_Soru_ToEtiket">
+            <End Role="Etiket" EntitySet="Etiket" />
+            <End Role="Soru" EntitySet="Soru" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Soru_ToKategori" Association="Self.FK_Soru_ToKategori">
+            <End Role="Kategori" EntitySet="Kategori" />
+            <End Role="Soru" EntitySet="Soru" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Soru_ToUye" Association="Self.FK_Soru_ToUye">
+            <End Role="Uye" EntitySet="Uye" />
+            <End Role="Soru" EntitySet="Soru" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FinalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="FinalEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cevap" EntityType="FinalModel.Cevap" />
+          <EntitySet Name="Etiket" EntityType="FinalModel.Etiket" />
+          <EntitySet Name="Kategori" EntityType="FinalModel.Kategori" />
+          <EntitySet Name="Soru" EntityType="FinalModel.Soru" />
+          <EntitySet Name="Uye" EntityType="FinalModel.Uye" />
+          <AssociationSet Name="FK_Cevap_ToSoru" Association="FinalModel.FK_Cevap_ToSoru">
+            <End Role="Soru" EntitySet="Soru" />
+            <End Role="Cevap" EntitySet="Cevap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cevap_ToUye" Association="FinalModel.FK_Cevap_ToUye">
+            <End Role="Uye" EntitySet="Uye" />
+            <End Role="Cevap" EntitySet="Cevap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Soru_ToEtiket" Association="FinalModel.FK_Soru_ToEtiket">
+            <End Role="Etiket" EntitySet="Etiket" />
+            <End Role="Soru" EntitySet="Soru" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Soru_ToKategori" Association="FinalModel.FK_Soru_ToKategori">
+            <End Role="Kategori" EntitySet="Kategori" />
+            <End Role="Soru" EntitySet="Soru" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Soru_ToUye" Association="FinalModel.FK_Soru_ToUye">
+            <End Role="Uye" EntitySet="Uye" />
+            <End Role="Soru" EntitySet="Soru" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Cevap">
+          <Key>
+            <PropertyRef Name="CevapId" />
+          </Key>
+          <Property Name="CevapId" Type="Int32" Nullable="false" />
+          <Property Name="CevapIcerik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CevapUyeId" Type="Int32" Nullable="false" />
+          <Property Name="CevapSoruId" Type="Int32" Nullable="false" />
+          <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Soru" Relationship="FinalModel.FK_Cevap_ToSoru" FromRole="Cevap" ToRole="Soru" />
+          <NavigationProperty Name="Uye" Relationship="FinalModel.FK_Cevap_ToUye" FromRole="Cevap" ToRole="Uye" />
+        </EntityType>
+        <EntityType Name="Etiket">
+          <Key>
+            <PropertyRef Name="EtiketId" />
+          </Key>
+          <Property Name="EtiketId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EtiketAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Soru" Relationship="FinalModel.FK_Soru_ToEtiket" FromRole="Etiket" ToRole="Soru" />
+        </EntityType>
+        <EntityType Name="Kategori">
+          <Key>
+            <PropertyRef Name="KategoriId" />
+          </Key>
+          <Property Name="KategoriId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KategoriAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Soru" Relationship="FinalModel.FK_Soru_ToKategori" FromRole="Kategori" ToRole="Soru" />
+        </EntityType>
+        <EntityType Name="Soru">
+          <Key>
+            <PropertyRef Name="SoruId" />
+          </Key>
+          <Property Name="SoruId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Baslik" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Icerik" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tarih" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Goruntulenme" Type="Int32" Nullable="false" />
+          <Property Name="SoruKategoriId" Type="Int32" Nullable="false" />
+          <Property Name="SoruUyeId" Type="Int32" Nullable="false" />
+          <Property Name="SoruEtiketId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cevap" Relationship="FinalModel.FK_Cevap_ToSoru" FromRole="Soru" ToRole="Cevap" />
+          <NavigationProperty Name="Etiket" Relationship="FinalModel.FK_Soru_ToEtiket" FromRole="Soru" ToRole="Etiket" />
+          <NavigationProperty Name="Kategori" Relationship="FinalModel.FK_Soru_ToKategori" FromRole="Soru" ToRole="Kategori" />
+          <NavigationProperty Name="Uye" Relationship="FinalModel.FK_Soru_ToUye" FromRole="Soru" ToRole="Uye" />
+        </EntityType>
+        <EntityType Name="Uye">
+          <Key>
+            <PropertyRef Name="UyeId" />
+          </Key>
+          <Property Name="UyeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciAdi" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Sifre" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AdSoyad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UyeAdmin" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cevap" Relationship="FinalModel.FK_Cevap_ToUye" FromRole="Uye" ToRole="Cevap" />
+          <NavigationProperty Name="Soru" Relationship="FinalModel.FK_Soru_ToUye" FromRole="Uye" ToRole="Soru" />
+          <Property Name="UyeFoto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_Cevap_ToSoru">
+          <End Type="FinalModel.Soru" Role="Soru" Multiplicity="1" />
+          <End Type="FinalModel.Cevap" Role="Cevap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Soru">
+              <PropertyRef Name="SoruId" />
+            </Principal>
+            <Dependent Role="Cevap">
+              <PropertyRef Name="CevapSoruId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cevap_ToUye">
+          <End Type="FinalModel.Uye" Role="Uye" Multiplicity="1" />
+          <End Type="FinalModel.Cevap" Role="Cevap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Uye">
+              <PropertyRef Name="UyeId" />
+            </Principal>
+            <Dependent Role="Cevap">
+              <PropertyRef Name="CevapUyeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Soru_ToEtiket">
+          <End Type="FinalModel.Etiket" Role="Etiket" Multiplicity="1" />
+          <End Type="FinalModel.Soru" Role="Soru" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Etiket">
+              <PropertyRef Name="EtiketId" />
+            </Principal>
+            <Dependent Role="Soru">
+              <PropertyRef Name="SoruEtiketId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Soru_ToKategori">
+          <End Type="FinalModel.Kategori" Role="Kategori" Multiplicity="1" />
+          <End Type="FinalModel.Soru" Role="Soru" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kategori">
+              <PropertyRef Name="KategoriId" />
+            </Principal>
+            <Dependent Role="Soru">
+              <PropertyRef Name="SoruKategoriId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Soru_ToUye">
+          <End Type="FinalModel.Uye" Role="Uye" Multiplicity="1" />
+          <End Type="FinalModel.Soru" Role="Soru" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Uye">
+              <PropertyRef Name="UyeId" />
+            </Principal>
+            <Dependent Role="Soru">
+              <PropertyRef Name="SoruUyeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FinalModelStoreContainer" CdmEntityContainer="FinalEntities">
+          <EntitySetMapping Name="Cevap">
+            <EntityTypeMapping TypeName="FinalModel.Cevap">
+              <MappingFragment StoreEntitySet="Cevap">
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="CevapSoruId" ColumnName="CevapSoruId" />
+                <ScalarProperty Name="CevapUyeId" ColumnName="CevapUyeId" />
+                <ScalarProperty Name="CevapIcerik" ColumnName="CevapIcerik" />
+                <ScalarProperty Name="CevapId" ColumnName="CevapId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Etiket">
+            <EntityTypeMapping TypeName="FinalModel.Etiket">
+              <MappingFragment StoreEntitySet="Etiket">
+                <ScalarProperty Name="EtiketAdi" ColumnName="EtiketAdi" />
+                <ScalarProperty Name="EtiketId" ColumnName="EtiketId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kategori">
+            <EntityTypeMapping TypeName="FinalModel.Kategori">
+              <MappingFragment StoreEntitySet="Kategori">
+                <ScalarProperty Name="KategoriAdi" ColumnName="KategoriAdi" />
+                <ScalarProperty Name="KategoriId" ColumnName="KategoriId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Soru">
+            <EntityTypeMapping TypeName="FinalModel.Soru">
+              <MappingFragment StoreEntitySet="Soru">
+                <ScalarProperty Name="SoruEtiketId" ColumnName="SoruEtiketId" />
+                <ScalarProperty Name="SoruUyeId" ColumnName="SoruUyeId" />
+                <ScalarProperty Name="SoruKategoriId" ColumnName="SoruKategoriId" />
+                <ScalarProperty Name="Goruntulenme" ColumnName="Goruntulenme" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Icerik" ColumnName="Icerik" />
+                <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+                <ScalarProperty Name="SoruId" ColumnName="SoruId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Uye">
+            <EntityTypeMapping TypeName="FinalModel.Uye">
+              <MappingFragment StoreEntitySet="Uye">
+                <ScalarProperty Name="UyeFoto" ColumnName="UyeFoto" />
+                <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+                <ScalarProperty Name="UyeAdmin" ColumnName="UyeAdmin" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="UyeId" ColumnName="UyeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

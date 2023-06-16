@@ -1,0 +1,29 @@
+<!-- <button mat-fab matTooltip="Soru Ekle" color="primary" (click)="Ekle()">
+  <mat-icon aria-label="label">loupe</mat-icon> -->
+
+  <button mat-button color="primary" (click)="goBack()"><mat-icon aria-label="label">arrow_back</mat-icon></button>
+  <mat-card class="mat-elevation-z4">
+    <div class="container">
+      <h1>Cevaplarım</h1>
+      <mat-form-field appearance="outline">
+        <input matInput placeholder="Aranacak bir değer giriniz." (keyup)="Filtrele($event)">
+      </mat-form-field>
+      <p></p>
+      <div class="container" *ngFor="let cevap of cevaplar">
+        <h3><a href="#" [routerLink]="['/soru', cevap.CevapSoruId]">{{cevap.SoruBaslik}}</a></h3>    
+        <p>{{cevap.CevapIcerik}}<p>
+        <p>
+          <b> Tarih :</b> {{cevap.Tarih |date:'dd.MM.yyyy HH:mm'}} &nbsp;&nbsp;
+        </p>
+        <div>
+          <button mat-icon-button matTooltip="Düzenle" color="primary" (click)="Duzenle(kayit)" >
+            <mat-icon aria-label="label">edit</mat-icon>
+          </button>&nbsp;&nbsp;&nbsp;
+          <button mat-icon-button color="warn" matTooltip="Sil" (click)="Sil(kayit)">
+            <mat-icon aria-label="label">delete</mat-icon>
+          </button>
+        </div>
+          <hr>
+      </div>
+    </div>
+  </mat-card>

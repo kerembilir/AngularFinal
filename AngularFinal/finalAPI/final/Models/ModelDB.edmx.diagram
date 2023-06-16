@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e23e1a9e35dd44ce9413d562e6986fad" Name="Diagram1">
+        <EntityTypeShape EntityType="FinalModel.Cevap" Width="1.5" PointX="6.375" PointY="0.75" />
+        <EntityTypeShape EntityType="FinalModel.Etiket" Width="1.5" PointX="9" PointY="0.5" />
+        <EntityTypeShape EntityType="FinalModel.Kategori" Width="1.5" PointX="9.25" PointY="2.875" />
+        <EntityTypeShape EntityType="FinalModel.Soru" Width="1.5" PointX="3.875" PointY="0.5" />
+        <EntityTypeShape EntityType="FinalModel.Uye" Width="1.5" PointX="1.5" PointY="1.375" />
+        <AssociationConnector Association="FinalModel.FK_Cevap_ToSoru" />
+        <AssociationConnector Association="FinalModel.FK_Cevap_ToUye" />
+        <AssociationConnector Association="FinalModel.FK_Soru_ToEtiket" />
+        <AssociationConnector Association="FinalModel.FK_Soru_ToKategori" />
+        <AssociationConnector Association="FinalModel.FK_Soru_ToUye" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

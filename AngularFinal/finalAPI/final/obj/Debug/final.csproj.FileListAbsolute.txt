@@ -1,0 +1,190 @@
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\ApplicationInsights.config
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\csc.exe
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\System.Collections.Immutable.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\vbc.exe
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\VBCSCompiler.exe
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\roslyn\VBCSCompiler.exe.config
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\final.dll.config
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\final.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\final.pdb
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\EntityFramework.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\EntityFramework.SqlServer.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.AI.Web.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.AI.WindowsServer.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.ApplicationInsights.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Newtonsoft.Json.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\System.Net.Http.Formatting.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\System.Web.Http.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\System.Web.Http.WebHost.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\EntityFramework.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\EntityFramework.SqlServer.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.AI.Web.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.AI.WindowsServer.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.ApplicationInsights.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Newtonsoft.Json.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\System.Net.Http.Formatting.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\System.Web.Http.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\System.Web.Http.WebHost.xml
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\obj\Debug\final.csprojResolveAssemblyReference.cache
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\obj\Debug\final.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\obj\Debug\final.pdb
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.Web.Infrastructure.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\Swashbuckle.Core.dll
+c:\users\aynen\onedrive\documents\visual studio 2015\Projects\final\final\bin\WebActivatorEx.dll
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.Owin.Cors.dll
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.Owin.dll
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.Owin.Security.dll
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\Owin.dll
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\System.Web.Cors.dll
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\System.Web.Http.Owin.dll
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.Owin.xml
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.Owin.Cors.xml
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.Owin.Security.xml
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\aynen\OneDrive\documents\visual studio 2015\Projects\final\final\bin\System.Web.Http.Owin.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\ApplicationInsights.config
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\final.dll.config
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\final.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\final.pdb
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\EntityFramework.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\EntityFramework.SqlServer.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.AI.Web.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.Owin.Cors.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.Owin.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.Owin.Security.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Newtonsoft.Json.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Owin.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Swashbuckle.Core.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\System.Net.Http.Formatting.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\System.Web.Cors.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\System.Web.Http.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\System.Web.Http.Owin.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\System.Web.Http.WebHost.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\WebActivatorEx.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\EntityFramework.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\EntityFramework.SqlServer.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.AI.Web.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.Owin.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.Owin.Cors.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.Owin.Security.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\Newtonsoft.Json.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\System.Net.Http.Formatting.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\System.Web.Http.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\System.Web.Http.Owin.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\System.Web.Http.WebHost.xml
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\obj\Debug\final.csproj.AssemblyReference.cache
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\obj\Debug\final.csproj.CoreCompileInputs.cache
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\obj\Debug\final.csproj.CopyComplete
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\obj\Debug\final.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\obj\Debug\final.pdb
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\csc.exe
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\vbc.exe
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\VBCSCompiler.exe
+C:\Users\Kerem\Desktop\soru-cevap-main\soru-cevap-main\finalAPI\final\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\ApplicationInsights.config
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\csc.exe
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\vbc.exe
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\VBCSCompiler.exe
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\final.dll.config
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\final.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\final.pdb
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\EntityFramework.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\EntityFramework.SqlServer.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.AI.Web.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.Owin.Cors.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.Owin.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.Owin.Security.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Newtonsoft.Json.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Owin.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Swashbuckle.Core.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\System.Net.Http.Formatting.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\System.Web.Cors.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\System.Web.Http.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\System.Web.Http.Owin.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\System.Web.Http.WebHost.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\WebActivatorEx.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\EntityFramework.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\EntityFramework.SqlServer.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.AI.Web.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.Owin.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.Owin.Cors.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.Owin.Security.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\Newtonsoft.Json.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\System.Net.Http.Formatting.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\System.Web.Http.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\System.Web.Http.Owin.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\bin\System.Web.Http.WebHost.xml
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\obj\Debug\final.csproj.AssemblyReference.cache
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\obj\Debug\final.csproj.CoreCompileInputs.cache
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\obj\Debug\final.csproj.CopyComplete
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\obj\Debug\final.dll
+C:\Users\Kerem\Desktop\AngularFinal\AngularFinal\finalAPI\final\obj\Debug\final.pdb
